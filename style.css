@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+
+}
+header{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    background-color: lavender;
+    text-align: center;
+}
+body{
+    background-color: darkgrey;
+
+}
+.movies{
+    display: flex;
+    justify-content: center;
+}
+
+.movie{
+    width:240px;
+    height: 430px;
+    margin:10px;
+    background-color: rgb(221, 219, 219);
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(143, 143, 143);
+
+}
+.movie p, span{
+    padding: 10px;
+    color: rgb(102, 100, 100);
+}
+.movie img{
+    width:240px;
+    height: 330px;
+    border-radius: 10px 10px 0 0;
+
+
+}

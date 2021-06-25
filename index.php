@@ -35,18 +35,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>PHP OOP</title>
 </head>
 <body>
-
+    <header>
+        <h1>PHP OOP</h1>
+    </header>
     <main class="movies">
         <?php foreach ($movies as $movie):
         ?>        
             <div class="movie">
             <img src="<?php echo $movie->yor?>" alt="">
-                <h1>
+                <h2>
                     <?php echo $movie->title;?>
-                </h1>
+                </h2>
                 <p>
                     <?php echo $movie->subtitle;?>
                 </p>
