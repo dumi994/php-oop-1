@@ -1,23 +1,32 @@
 <?php 
-    class Movie {
+
+    class Movie
+    {
         public $title;
         public $subtitle;
         public $yor;
-        function __construct($title, $subtitle, $yor){
+
+        public function __construct($title, $subtitle, $yor)
+        {
             $this->title = $title;
             $this->subtitle = $subtitle;
             $this->yor = $yor;
             /* ci va il return? */
         }
+        
+        
     }
-    $PiratiDeiCaraibi1 = new Movie('Pirati dei caraibi', 'La maledizione della prima luna', 2003);
-    $PiratiDeiCaraibi2 = new Movie('Pirati dei caraibi', 'La maledizione del forziere fantasma', 2006);
-    $PiratiDeiCaraibi3 = new Movie('Pirati dei caraibi', 'Ai confini del mondo', 2007);
-    $PiratiDeiCaraibi4 = new Movie('Pirati dei caraibi', 'Oltre i confini del mare', 2011);
-    $PiratiDeiCaraibi5 = new Movie('Pirati dei caraibi', 'La vendetta di Salazar', 2017);
+    $movies=[
+        new Movie('Pirati dei caraibi', 'La maledizione della prima luna', 'https://images-na.ssl-images-amazon.com/images/I/61E38KYZrVL.jpg'),
+        new Movie('Pirati dei caraibi', 'La maledizione del forziere fantasma', 'https://www.dvd.it/176835-thickbox_default/pirati-dei-caraibi-la-maledizione-del-forziere-fantasma.jpg'),
+        new Movie('Pirati dei caraibi', 'Ai confini del mondo', 'https://images-na.ssl-images-amazon.com/images/I/61N8Xg3vYlL._SY445_.jpg'),
+        new Movie('Pirati dei caraibi', 'Oltre i confini del mare', 'https://cdn.bestmovie.it/wp-content/uploads/2011/04/Pirati-dei-Caraibi-4-Locandina-691x1024.jpg'),
+        new Movie('Pirati dei caraibi', 'La vendetta di Salazar', 'http://aforismi.meglio.it/img/film/La_vendetta_di_Salazar.jpg'),
+    ];
 
 
-    var_dump($PiratiDeiCaraibi1, $PiratiDeiCaraibi2, $PiratiDeiCaraibi3, $PiratiDeiCaraibi4, $PiratiDeiCaraibi5);
+
+  /*   var_dump($movies[0]); */
 ?>
 
 <!DOCTYPE html>
@@ -31,15 +40,24 @@
 <body>
 
     <main class="movies">
-        <?php foreach ($movie as $movies);
-            ?>
+        <?php foreach ($movies as $movie):
+        ?>        
             <div class="movie">
-                <h1><?php $movie->title;?></h1>
+            <img src="<?php echo $movie->yor?>" alt="">
+                <h1>
+                    <?php echo $movie->title;?>
+                </h1>
+                <p>
+                    <?php echo $movie->subtitle;?>
+                </p>
+                <span>
+                    <?php echo $movie->yora;?>  
+                </span>
             </div>
-            <?php
+        <?php    
+        endforeach;
         
-        
-        ?>
+        ?>    
     </main>
     
 </body>
