@@ -1,34 +1,7 @@
 <?php 
 
-    class Movie
-    {
-        public $title;
-        public $subtitle;
-        public $img;
-        public $anno;
-
-        public function __construct($title, $subtitle, $img, $anno)
-        {
-            $this->title = $title;
-            $this->subtitle = $subtitle;
-            $this->img = $img;
-            $this->anno = $anno;
-            /* ci va il return? */
-        }
-        
-        
-    }
-    $movies=[
-        new Movie('Pirati dei caraibi', 'La maledizione della prima luna', 'https://images-na.ssl-images-amazon.com/images/I/61E38KYZrVL.jpg', 2001),
-        new Movie('Pirati dei caraibi', 'La maledizione del forziere fantasma', 'https://www.dvd.it/176835-thickbox_default/pirati-dei-caraibi-la-maledizione-del-forziere-fantasma.jpg', 2006),
-        new Movie('Pirati dei caraibi', 'Ai confini del mondo', 'https://images-na.ssl-images-amazon.com/images/I/61N8Xg3vYlL._SY445_.jpg', 2011),
-        new Movie('Pirati dei caraibi', 'Oltre i confini del mare', 'https://cdn.bestmovie.it/wp-content/uploads/2011/04/Pirati-dei-Caraibi-4-Locandina-691x1024.jpg', 2016),
-        new Movie('Pirati dei caraibi', 'La vendetta di Salazar', 'http://aforismi.meglio.it/img/film/La_vendetta_di_Salazar.jpg', 2017),
-    ];
-
-
-
-  /*   var_dump($movies[0]); */
+   include __DIR__ . '/partials/class.php';
+   include __DIR__ . '/db/database.php'; 
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/style.css">
     <title>PHP OOP</title>
 </head>
 <body>
